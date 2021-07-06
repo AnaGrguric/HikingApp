@@ -637,7 +637,25 @@ img.route-cover {
  }
 
 
-@media (min-width: 768px) {  }
+@media (min-width: 768px) and (max-width: 1024px) { 
+
+    .content-section {
+        height: 93.4vh;
+        width: 100vw;
+    }
+
+    .search-nav {
+        width: 100vw;
+    }
+
+    .shortcuts {
+        padding-left: 20px;
+    }
+
+    .results {
+        margin-left: 20px;
+    }
+ }
 
 @media (min-width: 992px) { }
 
