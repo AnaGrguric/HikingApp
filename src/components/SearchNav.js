@@ -15,13 +15,6 @@ import Popup from './Filter';
 const SearchNav = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [btnPopup, setBtnPopup] = useState(false);
-    const [filterItem, setFilterItem] = useState(Data);
-    const [filterOption, setFiltersOption] = useState([]);
-
-    const filter = (option) => {
-        const filteredData = Data.filter(item => item.difficulty === option);
-        setFilterItem = {filteredData}
-    }
 
     return (
         <div className="container">
@@ -39,7 +32,7 @@ const SearchNav = () => {
                     </button>
                 </div>
             </nav>
-            <Popup trigger={btnPopup} setTrigger={setBtnPopup} filter={filter} />
+            <Popup trigger={btnPopup} setTrigger={setBtnPopup} />
             <div className="content-section" id="content-section">
                 <div className="shortcuts">
                     <p>Planinarski domovi (5)</p>
@@ -57,7 +50,7 @@ const SearchNav = () => {
                         }
                     }).map((item, key) => {
                         return (
-                            <div className="card col-sm-4" key={key} filterItem={filterItem}>
+                            <div className="card col-sm-4" key={key}>
                                 <div className="grid-layout">
                                     <img className="route-img" src={item.coverimg} alt="woods"></img>
                                     <img className="route-img-small" src={item.smallimg} alt="map"></img>

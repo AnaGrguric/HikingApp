@@ -1,6 +1,4 @@
 import React from 'react';
-import ShortcutsPD from './ShortcutsPD';
-import ShortcutsPoints from './ShortcutsPoints';
 import Elevation from '../icons/elevation.svg';
 
 const PointsContent = ({ data, pointsIndex }) => {
@@ -12,7 +10,7 @@ const PointsContent = ({ data, pointsIndex }) => {
                         <div className="route-review">
                             <div className="route-grid">
                                 <h4>{item.name}</h4>
-                                <img src={item.image} className="route-cover"></img>
+                                <img src={item.image} alt="route-img" className="route-cover"></img>
                             </div>
                             <div className="route-review-content">
                                 <div>
