@@ -11,18 +11,25 @@ import { useState } from 'react';
 import ShortcutsPD from './ShortcutsPD';
 import ShortcutsPoints from './ShortcutsPoints';
 import Popup from './Filter';
+import CloseSearch from './CloseSearch';
 
 const SearchNav = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [btnPopup, setBtnPopup] = useState(false);
-
+    
     return (
         <div className="container">
             <nav className="search-nav" id="search-block">
-                <div className="col-sm-4">
+                <div className="inline">
+                    <CloseSearch></CloseSearch>
                     <input
+                        id="search-input"
                         placeholder="Search"
-                        onClick={() => document.getElementById("search-block").classList.toggle("top") & document.getElementById("content-section").classList.toggle("block")}
+                        onClick={() => 
+                        document.getElementById("content-section").classList.add("block") &
+                        document.getElementById("search-block").classList.add("top") &
+                        document.getElementById("close-search").classList.remove("hidden") &
+                        console.log("clicked")}
                         onChange={(event) => {setSearchTerm(event.target.value);}}
                         >
                     </input>

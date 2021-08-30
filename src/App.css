@@ -160,9 +160,34 @@ header {
     outline: 0px;
 }
 
+nav > .search-nav > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+.close-icon {
+    border-radius: 50%;
+    background-color: #f8f8f8;
+    color: #ffffff;
+    width: 16px;
+    height: 16px;
+    z-index: 99999;
+    top: 3px;
+    margin-right: 12px;
+    padding: 8px;
+    position: relative;
+}
+
+.inline {
+    display: flex;
+    justify-content: center;
+    
+}
 button.filter-icon {
     position: relative;
-    top: 11px;
+    top: 4px;
     margin-left: 16px;
     background-image: url(icons/filter.svg);
     width: 32px;
@@ -521,6 +546,10 @@ img.route-cover {
 }
 
 .block::-webkit-scrollbar {
+    display: none;
+}
+
+.hidden {
     display: none;
 }
 

@@ -13,7 +13,7 @@ const RouteContent = ({ data, routeIndex }) => {
                     <div className="route-review">
                         <div className="route-grid">
                             <h4>{item.title}</h4>
-                            <img src={item.coverimg} className="route-cover"></img>
+                            <img src={item.coverimg} className="route-cover" alt="cover-img"></img>
                         </div>
                         <div className="route-review-content">
                             <div>

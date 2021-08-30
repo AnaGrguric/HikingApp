@@ -1,11 +1,11 @@
 import React from 'react';
-import Close from '../icons/close.svg';
+import btnClose from '../icons/btnClose.svg';
 
 function Popup(props) {
 
     return (props.trigger) ? (
         <div className="popup" id="filter-popup">
-            <img src={Close} alt="close-btn" className="btn-close"
+            <img src={btnClose} alt="close-btn" className="btn-close"
                 onClick={() => props.setTrigger(false)}></img>
             <h4>Odaberite kriterije:</h4>
             <div>
@@ -35,6 +35,8 @@ function Popup(props) {
             <button>Primjeni</button>
 
         </div>
+
+       
     ) : "";
 }
 
